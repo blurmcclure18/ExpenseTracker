@@ -43,7 +43,8 @@ def main():
             class _App(App):
                 def build(self):
                     box = BoxLayout()
-                    box.add_widget(TextInput(text=text_error, size_hint_x=0.9, multiline=True))
+                    box.add_widget(TextInput(text=text_error,
+                                   size_hint_x=0.9, multiline=True))
                     return box
             app2 = _App()
             try:

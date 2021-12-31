@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/home/alec/Documents/GitHub/ExpenseTracker/app/main.py", line 32, in main
+    app.run()
+  File "/usr/lib/python3.10/site-packages/kivy/app.py", line 950, in run
+    runTouchApp()
+  File "/usr/lib/python3.10/site-packages/kivy/base.py", line 582, in runTouchApp
+    EventLoop.mainloop()
+  File "/usr/lib/python3.10/site-packages/kivy/base.py", line 347, in mainloop
+    self.idle()
+  File "/usr/lib/python3.10/site-packages/kivy/base.py", line 387, in idle
+    Clock.tick()
+  File "/usr/lib/python3.10/site-packages/kivy/clock.py", line 733, in tick
+    self.post_idle(ts, self.idle())
+  File "/usr/lib/python3.10/site-packages/kivy/clock.py", line 776, in post_idle
+    self._process_events()
+  File "kivy/_clock.pyx", line 616, in kivy._clock.CyClockBase._process_events
+  File "kivy/_clock.pyx", line 649, in kivy._clock.CyClockBase._process_events
+  File "kivy/_clock.pyx", line 645, in kivy._clock.CyClockBase._process_events
+  File "kivy/_clock.pyx", line 218, in kivy._clock.ClockEvent.tick
+  File "/home/alec/Documents/GitHub/ExpenseTracker/app/startupscreen.py", line 43, in <lambda>
+    Clock.schedule_once(lambda dt: self.load_navigation(), 2)
+  File "/home/alec/Documents/GitHub/ExpenseTracker/app/startupscreen.py", line 64, in load_navigation
+    app.screens.primary_widget = NavigationScreen()
+  File "/home/alec/Documents/GitHub/ExpenseTracker/app/navigation.py", line 90, in __init__
+    from dtclasses import init_session
+  File "/home/alec/Documents/GitHub/ExpenseTracker/app/dtclasses.py", line 1, in <module>
+    from sqlalchemy import create_engine
+ModuleNotFoundError: No module named 'sqlalchemy'
